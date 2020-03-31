@@ -21,7 +21,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         loadItems()
         prepareHandlers()
-        InfoManager.load()
+        prepareInfo()
+    }
+    
+    func prepareInfo() {
+        InfoManager.load(complete:{ [weak self] in
+            self?.currencyView.reloadTable()
+        })
     }
 
     func prepareHandlers() {

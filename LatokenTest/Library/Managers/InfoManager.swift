@@ -11,9 +11,10 @@ import Foundation
 class InfoManager {
     static var items: [GetInfo.APIItem]?
 
-    static func load() {
+    static func load(complete: EmptyBlock?) {
         GetInfo { items, _, _ in
             self.items = items as? [GetInfo.APIItem]
+            complete?()
         }
     }
 
