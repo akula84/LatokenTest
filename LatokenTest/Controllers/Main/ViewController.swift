@@ -10,12 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet var currencyView: TableCurrencyView!
-
+    @IBOutlet var textField: UITextField!
+    
     var items: [GetCurrency.APIItem]? {
         didSet {
             currencyView.items = items
         }
     }
+    
+    var originalItems: [GetCurrency.APIItem]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,20 +45,13 @@ class ViewController: UIViewController {
         GetCurrency() { [weak self] items, _, _ in
             Router.removeLoader()
             self?.items = items as? [GetCurrency.APIItem]
+            self?.originalItems = self?.items
         }
     }
 
     func showDetail(item: GetCurrency.APIItem?) {
         let vc = DetailViewController.controller()
         vc.item = item
-        Router.pushViewController(vc)
-    }
-
-    @IBAction func actionHistory(_ sender: Any) {
-        let vc = HistoryViewController.controller()
-        vc.onDidSelect = { [weak self] in
-            self?.showDetail(item: $0)
-        }
         Router.pushViewController(vc)
     }
 }

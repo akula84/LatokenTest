@@ -33,18 +33,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iFB-Sx-foK" customClass="TableCurrencyView" customModule="LatokenTest" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="124" width="414" height="738"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jvb-i2-bi9">
+                                <rect key="frame" x="1" y="89" width="412" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="editingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="EKp-ES-Onj"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Jvb-i2-bi9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="1" id="2vr-Qj-CDM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iFB-Sx-foK" secondAttribute="bottom" id="XcE-tx-Ojd"/>
+                            <constraint firstItem="Jvb-i2-bi9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="1" id="fFo-CD-N6Z"/>
+                            <constraint firstItem="iFB-Sx-foK" firstAttribute="top" secondItem="Jvb-i2-bi9" secondAttribute="bottom" constant="1" id="j8A-fr-edX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jvb-i2-bi9" secondAttribute="trailing" constant="1" id="l4f-zH-bPX"/>
                             <constraint firstItem="iFB-Sx-foK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lkD-g0-dgp"/>
+                            <constraint firstItem="iFB-Sx-foK" firstAttribute="top" secondItem="Jvb-i2-bi9" secondAttribute="bottom" constant="1" id="p3n-dx-Iiv"/>
                             <constraint firstItem="iFB-Sx-foK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="p7j-HK-jxj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iFB-Sx-foK" secondAttribute="trailing" id="zTC-Xo-I6C"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="lkD-g0-dgp"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="jn3-bo-JKB">
                         <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="GBb-uI-CcR">
@@ -55,6 +73,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="currencyView" destination="iFB-Sx-foK" id="tpf-zq-0B0"/>
+                        <outlet property="textField" destination="Jvb-i2-bi9" id="3e4-Go-3TX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

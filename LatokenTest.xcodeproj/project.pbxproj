@@ -47,6 +47,7 @@
 		8369F52024335B6800960F3A /* InfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369F51F24335B6800960F3A /* InfoManager.swift */; };
 		8369F52224335BA200960F3A /* GetInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369F52124335BA200960F3A /* GetInfo.swift */; };
 		8369F52424335BDB00960F3A /* InfoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369F52324335BDB00960F3A /* InfoItem.swift */; };
+		8369F5262433626E00960F3A /* ViewController.Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369F5252433626E00960F3A /* ViewController.Action.swift */; };
 		838E1EBE242A14DA00A65D17 /* BaseViewWithXIBInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838E1EBD242A14DA00A65D17 /* BaseViewWithXIBInit.swift */; };
 		838E1EC5242A150900A65D17 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838E1EC1242A150900A65D17 /* UIView+Utils.swift */; };
 		838E1EC6242A150900A65D17 /* UIView+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838E1EC2242A150900A65D17 /* UIView+Constraint.swift */; };
@@ -144,6 +145,7 @@
 		8369F51F24335B6800960F3A /* InfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoManager.swift; sourceTree = "<group>"; };
 		8369F52124335BA200960F3A /* GetInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInfo.swift; sourceTree = "<group>"; };
 		8369F52324335BDB00960F3A /* InfoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoItem.swift; sourceTree = "<group>"; };
+		8369F5252433626E00960F3A /* ViewController.Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.Action.swift; sourceTree = "<group>"; };
 		838E1EBD242A14DA00A65D17 /* BaseViewWithXIBInit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewWithXIBInit.swift; sourceTree = "<group>"; };
 		838E1EC1242A150900A65D17 /* UIView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 		838E1EC2242A150900A65D17 /* UIView+Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraint.swift"; sourceTree = "<group>"; };
@@ -411,6 +413,7 @@
 			children = (
 				833922CD242B069900091329 /* Cell */,
 				833356F0242A0E67001FF9B6 /* ViewController.swift */,
+				8369F5252433626E00960F3A /* ViewController.Action.swift */,
 				833356F2242A0E67001FF9B6 /* Main.storyboard */,
 			);
 			path = Main;
@@ -841,6 +844,7 @@
 				838E1EC6242A150900A65D17 /* UIView+Constraint.swift in Sources */,
 				838E1EE0242A164E00A65D17 /* PagedAPI.swift in Sources */,
 				8369F52024335B6800960F3A /* InfoManager.swift in Sources */,
+				8369F5262433626E00960F3A /* ViewController.Action.swift in Sources */,
 				832ACE1A242C79C80092F0F0 /* Monitor.swift in Sources */,
 				838E1F0D242A1B9000A65D17 /* Localization.swift in Sources */,
 				838E1EC5242A150900A65D17 /* UIView+Utils.swift in Sources */,
