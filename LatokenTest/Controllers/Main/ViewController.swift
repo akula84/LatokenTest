@@ -46,6 +46,9 @@ class ViewController: UIViewController {
 
     @IBAction func actionHistory(_ sender: Any) {
         let vc = HistoryViewController.controller()
+        vc.onDidSelect = { [weak self] in
+            self?.showDetail(item: $0)
+        }
         let nav = UINavigationController(rootViewController: vc)
         Router.present(nav)
     }

@@ -8,6 +8,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="y3T-EX-fDF">
+            <objects>
+                <navigationController id="z8a-C4-sx7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="j6L-fy-8NT">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ane-1p-KeN" kind="relationship" relationship="rootViewController" id="zzy-pb-jsp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ni-cF-nZi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1345" y="-135"/>
+        </scene>
         <!--History View Controller-->
         <scene sceneID="pc5-49-GKC">
             <objects>
@@ -15,10 +31,31 @@
                     <view key="view" contentMode="scaleToFill" id="NPG-mN-SuM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nRG-Ou-gIL" customClass="TableCurrencyView" customModule="LatokenTest" customModuleProvider="target">
+                                <rect key="frame" x="1" y="1" width="412" height="860"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FBC-v2-wKc" firstAttribute="bottom" secondItem="nRG-Ou-gIL" secondAttribute="bottom" constant="1" id="3Cb-Q7-Wgc"/>
+                            <constraint firstItem="nRG-Ou-gIL" firstAttribute="top" secondItem="NPG-mN-SuM" secondAttribute="top" constant="1" id="KTz-dk-ZDJ"/>
+                            <constraint firstItem="nRG-Ou-gIL" firstAttribute="leading" secondItem="NPG-mN-SuM" secondAttribute="leading" constant="1" id="cNi-fS-lTY"/>
+                            <constraint firstItem="FBC-v2-wKc" firstAttribute="trailing" secondItem="nRG-Ou-gIL" secondAttribute="trailing" constant="1" id="hnq-0B-Ede"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FBC-v2-wKc"/>
                     </view>
-                    <navigationItem key="navigationItem" id="oU5-OE-Lmu"/>
+                    <navigationItem key="navigationItem" id="oU5-OE-Lmu">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ak6-H0-gU1">
+                            <connections>
+                                <action selector="actionCancel:" destination="Ane-1p-KeN" id="i4C-pd-3VP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="currencyView" destination="nRG-Ou-gIL" id="oBi-hx-qqe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fu4-BN-eJQ" sceneMemberID="firstResponder"/>
             </objects>

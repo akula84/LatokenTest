@@ -22,8 +22,8 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exchange" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vzw-v0-kXj">
-                                <rect key="frame" x="162" y="382.5" width="90" height="25.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exchange" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vzw-v0-kXj">
+                                <rect key="frame" x="10" y="382.5" width="394" height="25.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -33,13 +33,16 @@
                         <constraints>
                             <constraint firstItem="QFu-wT-fhH" firstAttribute="top" secondItem="Vzw-v0-kXj" secondAttribute="bottom" constant="24.5" id="9gx-uJ-1PA"/>
                             <constraint firstItem="Vzw-v0-kXj" firstAttribute="centerX" secondItem="QFu-wT-fhH" secondAttribute="centerX" id="KfH-WL-SQP"/>
+                            <constraint firstItem="rFE-Sx-QDt" firstAttribute="trailing" secondItem="Vzw-v0-kXj" secondAttribute="trailing" constant="10" id="cvm-72-xTg"/>
                             <constraint firstItem="QFu-wT-fhH" firstAttribute="centerX" secondItem="rFE-Sx-QDt" secondAttribute="centerX" id="gUl-K5-HQb"/>
                             <constraint firstItem="QFu-wT-fhH" firstAttribute="centerY" secondItem="rFE-Sx-QDt" secondAttribute="centerY" id="uX6-0W-mf5"/>
+                            <constraint firstItem="Vzw-v0-kXj" firstAttribute="leading" secondItem="rFE-Sx-QDt" secondAttribute="leading" constant="10" id="zVb-Ea-Efq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rFE-Sx-QDt"/>
                     </view>
                     <connections>
                         <outlet property="label" destination="QFu-wT-fhH" id="aBd-0T-LPc"/>
+                        <outlet property="nameLabel" destination="Vzw-v0-kXj" id="bRF-TX-jY9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LGX-Uv-Nxl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

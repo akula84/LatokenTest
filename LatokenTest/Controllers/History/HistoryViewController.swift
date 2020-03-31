@@ -9,17 +9,31 @@
 import UIKit
 
 class HistoryViewController: UIViewController {
-    //@IBOutlet var tableView: UITableView!
+    @IBOutlet var currencyView: TableCurrencyView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let items = DataManager.historyItems
-        print("items", items?.count)
-        items?.forEach({
-            print("forEach", $0)
-        })
-        // Do any additional setup after loading the view.
+        loadItems()
+        prepareHandlers()
     }
 
+    var onDidSelect: ((GetCurrency.APIItem?) -> Void)?
+    func prepareHandlers() {
+        currencyView.onDidSelect = { [weak self] item in
+            print("HistoryViewController onDidSelect")
+            self?.dismiss(animated: true, completion: {
+                print("HistoryViewController onDidSelect")
+                self?.onDidSelect?(item)
+            })
+        }
+    }
+
+    func loadItems() {
+        currencyView.items = DataManager.historyItems
+    }
+    
+    @IBAction func actionCancel(_ sender: Any) {
+        dismiss()
+    }
 
 }

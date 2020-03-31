@@ -32,7 +32,7 @@ class DataManager: NSObject {
             return
         }
         write({
-            realm?.add(item)
+            realm?.add(item, update: .all)
         })
     }
 

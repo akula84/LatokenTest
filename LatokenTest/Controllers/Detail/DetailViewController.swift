@@ -11,12 +11,14 @@ import UIKit
 class DetailViewController: UIViewController {
 
     @IBOutlet var label: UILabel!
+    @IBOutlet var nameLabel: UILabel!
     
     var item: GetCurrency.APIItem?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        nameLabel.text = item?.name
         loadItem()
     }
     
