@@ -56,7 +56,6 @@ class ViewController: UIViewController {
         vc.onDidSelect = { [weak self] in
             self?.showDetail(item: $0)
         }
-        let nav = UINavigationController(rootViewController: vc)
-        Router.present(nav)
+        Router.pushViewController(vc)
     }
 }

@@ -20,18 +20,12 @@ class HistoryViewController: UIViewController {
     var onDidSelect: ((GetCurrency.APIItem?) -> Void)?
     func prepareHandlers() {
         currencyView.onDidSelect = { [weak self] item in
-            self?.dismiss(animated: true, completion: {
-                self?.onDidSelect?(item)
-            })
+            Router.popViewController()
+            self?.onDidSelect?(item)
         }
     }
 
     func loadItems() {
         currencyView.items = DataManager.historyItems?.reversed()
     }
-    
-    @IBAction func actionCancel(_ sender: Any) {
-        dismiss()
-    }
-
 }

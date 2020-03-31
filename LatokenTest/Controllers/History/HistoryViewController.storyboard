@@ -46,13 +46,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FBC-v2-wKc"/>
                     </view>
-                    <navigationItem key="navigationItem" id="oU5-OE-Lmu">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ak6-H0-gU1">
-                            <connections>
-                                <action selector="actionCancel:" destination="Ane-1p-KeN" id="i4C-pd-3VP"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="oU5-OE-Lmu"/>
                     <connections>
                         <outlet property="currencyView" destination="nRG-Ou-gIL" id="oBi-hx-qqe"/>
                     </connections>
