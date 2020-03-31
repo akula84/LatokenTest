@@ -44,6 +44,9 @@
 		8369F5172433514800960F3A /* TableCurrencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369F5162433514800960F3A /* TableCurrencyView.swift */; };
 		8369F5192433515F00960F3A /* TableCurrencyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8369F5182433515F00960F3A /* TableCurrencyView.xib */; };
 		8369F51B243351B200960F3A /* TableCurrencyView.TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369F51A243351B200960F3A /* TableCurrencyView.TableView.swift */; };
+		8369F52024335B6800960F3A /* InfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369F51F24335B6800960F3A /* InfoManager.swift */; };
+		8369F52224335BA200960F3A /* GetInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369F52124335BA200960F3A /* GetInfo.swift */; };
+		8369F52424335BDB00960F3A /* InfoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369F52324335BDB00960F3A /* InfoItem.swift */; };
 		838E1EBE242A14DA00A65D17 /* BaseViewWithXIBInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838E1EBD242A14DA00A65D17 /* BaseViewWithXIBInit.swift */; };
 		838E1EC5242A150900A65D17 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838E1EC1242A150900A65D17 /* UIView+Utils.swift */; };
 		838E1EC6242A150900A65D17 /* UIView+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838E1EC2242A150900A65D17 /* UIView+Constraint.swift */; };
@@ -138,6 +141,9 @@
 		8369F5162433514800960F3A /* TableCurrencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCurrencyView.swift; sourceTree = "<group>"; };
 		8369F5182433515F00960F3A /* TableCurrencyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableCurrencyView.xib; sourceTree = "<group>"; };
 		8369F51A243351B200960F3A /* TableCurrencyView.TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCurrencyView.TableView.swift; sourceTree = "<group>"; };
+		8369F51F24335B6800960F3A /* InfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoManager.swift; sourceTree = "<group>"; };
+		8369F52124335BA200960F3A /* GetInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInfo.swift; sourceTree = "<group>"; };
+		8369F52324335BDB00960F3A /* InfoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoItem.swift; sourceTree = "<group>"; };
 		838E1EBD242A14DA00A65D17 /* BaseViewWithXIBInit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewWithXIBInit.swift; sourceTree = "<group>"; };
 		838E1EC1242A150900A65D17 /* UIView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 		838E1EC2242A150900A65D17 /* UIView+Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraint.swift"; sourceTree = "<group>"; };
@@ -295,6 +301,7 @@
 			children = (
 				83654826243337540006ECA1 /* CurrencyItem..swift */,
 				836548312433450F0006ECA1 /* ExchangeItem.swift */,
+				8369F52324335BDB00960F3A /* InfoItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -314,6 +321,7 @@
 				83335706242A1054001FF9B6 /* Router.swift */,
 				8369F51124334B8700960F3A /* DataManager.swift */,
 				832ACE17242C79A20092F0F0 /* NetworkManager.swift */,
+				8369F51F24335B6800960F3A /* InfoManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -504,6 +512,7 @@
 			children = (
 				83654824243337140006ECA1 /* GetCurrency.swift */,
 				8365482F243344540006ECA1 /* GetExchange.swift */,
+				8369F52124335BA200960F3A /* GetInfo.swift */,
 			);
 			path = GET;
 			sourceTree = "<group>";
@@ -799,6 +808,7 @@
 				838E1EFD242A192E00A65D17 /* MessageCenter.swift in Sources */,
 				838E1F4F242A20A100A65D17 /* UIColor+Utils.swift in Sources */,
 				838E1F48242A207700A65D17 /* Double+Utils.swift in Sources */,
+				8369F52424335BDB00960F3A /* InfoItem.swift in Sources */,
 				833922DF242B0B0200091329 /* RegisterTableView.swift in Sources */,
 				8369F51224334B8700960F3A /* DataManager.swift in Sources */,
 				832ACE0D242C6A3B0092F0F0 /* Cancellable.swift in Sources */,
@@ -830,9 +840,11 @@
 				8369F51B243351B200960F3A /* TableCurrencyView.TableView.swift in Sources */,
 				838E1EC6242A150900A65D17 /* UIView+Constraint.swift in Sources */,
 				838E1EE0242A164E00A65D17 /* PagedAPI.swift in Sources */,
+				8369F52024335B6800960F3A /* InfoManager.swift in Sources */,
 				832ACE1A242C79C80092F0F0 /* Monitor.swift in Sources */,
 				838E1F0D242A1B9000A65D17 /* Localization.swift in Sources */,
 				838E1EC5242A150900A65D17 /* UIView+Utils.swift in Sources */,
+				8369F52224335BA200960F3A /* GetInfo.swift in Sources */,
 				833356ED242A0E67001FF9B6 /* AppDelegate.swift in Sources */,
 				838E1EDD242A164E00A65D17 /* API+Creating.swift in Sources */,
 				838E1F3E242A1F5100A65D17 /* Date+Transfrom.swift in Sources */,

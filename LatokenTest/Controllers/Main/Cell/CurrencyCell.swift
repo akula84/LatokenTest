@@ -19,21 +19,17 @@ class CurrencyCell: UITableViewCell {
         didSet {
             nameLabel.text = item?.name
             tagLabel.text = item?.tag
+            prepareImage()
         }
     }
-    /*
+    
     func prepareImage() {
         imageCharacter.image = nil
         imageCharacter.kf.cancelDownloadTask()
-        guard let imagePath = imagePath,
+        guard let imagePath = InfoManager.image(item),
             let url = URL(string: imagePath) else {
             return
         }
         imageCharacter.kf.setImage(with: url)
     }
-    
-    var imagePath: String? {
-        item?.image
-    }
-    */
 }

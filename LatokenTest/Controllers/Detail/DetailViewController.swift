@@ -24,7 +24,7 @@ class DetailViewController: UIViewController {
     
     func loadItem() {
         Router.showLoader()
-        GetExchange(sync: false, object: item?.tag) { [weak self] (reply, _, _) in
+        GetExchange(object: item?.tag) { [weak self] (reply, _, _) in
             Router.removeLoader()
             guard let value = (reply as? GetExchange.APIItem)?.value else {
                 return

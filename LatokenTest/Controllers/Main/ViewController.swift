@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         loadItems()
         prepareHandlers()
+        InfoManager.load()
     }
 
     func prepareHandlers() {
@@ -32,7 +33,7 @@ class ViewController: UIViewController {
 
     func loadItems() {
         Router.showLoader()
-        GetCurrency(sync: false, object: nil) { [weak self] items, _, _ in
+        GetCurrency() { [weak self] items, _, _ in
             Router.removeLoader()
             self?.items = items as? [GetCurrency.APIItem]
         }
