@@ -11,33 +11,20 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
 
-    typealias API = GetСharacters
-    typealias Adapter = ScrollingPaginatorAlamofireAdapter<API>
+    typealias API = GetCurrency
+    var items: [API.APIItem]?
 
-    lazy var scrollingPaginator: ScrollingPaginator<Adapter>? = {
-        let api = API()
-        let adapter = Adapter(api: api)
-        var paginator = ScrollingPaginator(provider: adapter)
-        var firstLoad = true
-        paginator.onLoadingStarted = { _ in
-            if firstLoad {
-                firstLoad = false
-                Router.showLoader()
-            }
-        }
-        paginator.onItemsLoaded = { [weak self] result in
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loadItems()
+    }
+
+    func loadItems() {
+        Router.showLoader()
+        API(sync: false, object: nil) { [weak self] (items, _, _) in
             Router.removeLoader()
-            switch result {
-            case .failure: MessageCenter.showMessage(L10n.popupErrorClientMessageLoadingMessage)
-            case .success:
-                self?.tableView.reloadData()
-            }
+            self?.items = items as? [API.APIItem]
+            self?.reloadTable()
         }
-        return paginator
-    }()
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        scrollingPaginator?.start()
     }
 }

@@ -10,16 +10,22 @@ import UIKit
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        scrollingPaginator?.numberOfItems ?? 0
+        items?.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: СharacterCell = tableView.dequeue(for: indexPath)
-        cell.item = scrollingPaginator?[indexPath.row]
+        let cell: CurrencyCell = tableView.dequeue(for: indexPath)
+        cell.item = item(indexPath)
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        scrollingPaginator?.increaseLastVisibleIndex(to: indexPath.row)
+}
+
+extension ViewController {
+    func reloadTable() {
+        tableView.reloadData()
+    }
+
+    func item(_ indexPath: IndexPath) -> API.APIItem? {
+        items?.valueAt(indexPath.row)
     }
 }

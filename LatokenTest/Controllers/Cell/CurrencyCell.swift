@@ -10,17 +10,17 @@ import Alamofire
 import UIKit
 import Kingfisher
 
-class СharacterCell: UITableViewCell {
+class CurrencyCell: UITableViewCell {
     @IBOutlet var imageCharacter: UIImageView!
     @IBOutlet var nameLabel: UILabel!
     
-    var item: CharacterItem? {
+    var item: GetCurrency.APIItem? {
         didSet {
             nameLabel.text = item?.name
-            prepareImage()
+            //prepareImage()
         }
     }
-    
+    /*
     func prepareImage() {
         imageCharacter.image = nil
         imageCharacter.kf.cancelDownloadTask()
@@ -30,8 +30,9 @@ class СharacterCell: UITableViewCell {
         }
         imageCharacter.kf.setImage(with: url)
     }
-
+    
     var imagePath: String? {
         item?.image
     }
+    */
 }

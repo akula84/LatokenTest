@@ -154,8 +154,8 @@ class AlamofireAPI: API {
 
     var allHTTPHeaderFields: HTTPHeaders {
         var dict = HTTPHeaders()
-        dict["Content-Type"] = contentType
-        dict["Accept"] = Constants.ContentType.applicationJson
+        //dict["Content-Type"] = contentType
+        //dict["Accept"] = Constants.ContentType.applicationJson
         return dict
     }
 

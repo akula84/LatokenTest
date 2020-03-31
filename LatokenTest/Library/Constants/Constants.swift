@@ -14,7 +14,7 @@ public typealias StringBlock = (String?) -> Void
 
 struct Constants {
     struct API {
-        static let BaseURL =  "https://rickandmortyapi.com/api"
+        static let BaseURL =  "https://api.latoken.com/api/v2"
     }
 
     struct ContentType {
