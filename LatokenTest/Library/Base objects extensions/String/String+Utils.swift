@@ -152,9 +152,17 @@ extension String {
 
 extension String {
     var jsonDictionarys: [AliasDictionary]? {
+        jsonAny as? [AliasDictionary]
+    }
+    
+    var jsonDictionary: AliasDictionary? {
+        jsonAny as? AliasDictionary
+    }
+    
+    var jsonAny: Any? {
         if let data = data(using: String.Encoding.utf8) {
             do {
-                return try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [AliasDictionary]
+                return try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
             } catch {
                 print("Something went wrong")
             }

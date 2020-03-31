@@ -66,7 +66,7 @@ class AlamofireAPI: API {
         alamofireRequest!.responseData(queue: DispatchQueue.global(qos: .default)) { response in
             let urlResponse = response.response
             self.lastHeaders = urlResponse?.allHeaderFields
-
+            
             if urlResponse?.isUnauthorized ?? false {
                 self.logoutPresent()
                 return
@@ -91,8 +91,8 @@ class AlamofireAPI: API {
     func logoutPresent() {
         DispatchQueue.main.async {
             //Будем показывать логин/пароль
+            self.apiDidFailWithError(NSError.error401(error: L10n.error, message: L10n.unauthorized))
         }
-        apiDidFailWithError(NSError.error401(error: L10n.error, message: L10n.unauthorized))
     }
 
     func sendRequestWithDictCompletion(_ completion: APIDictCompletion?) {
@@ -154,8 +154,8 @@ class AlamofireAPI: API {
 
     var allHTTPHeaderFields: HTTPHeaders {
         var dict = HTTPHeaders()
-        //dict["Content-Type"] = contentType
-        //dict["Accept"] = Constants.ContentType.applicationJson
+        dict["Content-Type"] = contentType
+        dict["Accept"] = Constants.ContentType.applicationJson
         return dict
     }
 

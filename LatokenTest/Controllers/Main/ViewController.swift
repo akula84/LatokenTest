@@ -11,8 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
 
-    typealias API = GetCurrency
-    var items: [API.APIItem]?
+    var items: [GetCurrency.APIItem]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,9 +20,9 @@ class ViewController: UIViewController {
 
     func loadItems() {
         Router.showLoader()
-        API(sync: false, object: nil) { [weak self] (items, _, _) in
+        GetCurrency(sync: false, object: nil) { [weak self] (items, _, _) in
             Router.removeLoader()
-            self?.items = items as? [API.APIItem]
+            self?.items = items as? [GetCurrency.APIItem]
             self?.reloadTable()
         }
     }

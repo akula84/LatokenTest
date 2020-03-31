@@ -7,8 +7,6 @@
 //
 
 import Alamofire
-import Foundation
-import UIKit
 
 class GetCurrency: AlamofireAPI {
     typealias APIItem = CurrencyItem
@@ -31,9 +29,5 @@ class GetCurrency: AlamofireAPI {
         DispatchQueue.main.async {
             super.apiDidReturnReply(items, raw: raw)
         }
-    }
-
-    override var shouldLogRequest: Bool {
-        true
     }
 }

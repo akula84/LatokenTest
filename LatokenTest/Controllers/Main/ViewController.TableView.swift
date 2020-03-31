@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         items?.count ?? 0
     }
@@ -20,12 +20,20 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = DetailViewController.controller()
+        vc.item = item(indexPath)
+        Router.pushViewController(vc)
+    }
+}
+
 extension ViewController {
     func reloadTable() {
         tableView.reloadData()
     }
 
-    func item(_ indexPath: IndexPath) -> API.APIItem? {
+    func item(_ indexPath: IndexPath) -> GetCurrency.APIItem? {
         items?.valueAt(indexPath.row)
     }
 }

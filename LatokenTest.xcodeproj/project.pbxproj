@@ -35,6 +35,10 @@
 		833922E1242B0B4B00091329 /* ViewController.TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833922E0242B0B4B00091329 /* ViewController.TableView.swift */; };
 		83654825243337140006ECA1 /* GetCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83654824243337140006ECA1 /* GetCurrency.swift */; };
 		83654827243337540006ECA1 /* CurrencyItem..swift in Sources */ = {isa = PBXBuildFile; fileRef = 83654826243337540006ECA1 /* CurrencyItem..swift */; };
+		8365482C243343970006ECA1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8365482B243343970006ECA1 /* DetailViewController.swift */; };
+		8365482E243343A20006ECA1 /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8365482D243343A20006ECA1 /* DetailViewController.storyboard */; };
+		83654830243344540006ECA1 /* GetExchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8365482F243344540006ECA1 /* GetExchange.swift */; };
+		836548322433450F0006ECA1 /* ExchangeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836548312433450F0006ECA1 /* ExchangeItem.swift */; };
 		838E1EBE242A14DA00A65D17 /* BaseViewWithXIBInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838E1EBD242A14DA00A65D17 /* BaseViewWithXIBInit.swift */; };
 		838E1EC5242A150900A65D17 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838E1EC1242A150900A65D17 /* UIView+Utils.swift */; };
 		838E1EC6242A150900A65D17 /* UIView+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838E1EC2242A150900A65D17 /* UIView+Constraint.swift */; };
@@ -122,6 +126,10 @@
 		833922E0242B0B4B00091329 /* ViewController.TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.TableView.swift; sourceTree = "<group>"; };
 		83654824243337140006ECA1 /* GetCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrency.swift; sourceTree = "<group>"; };
 		83654826243337540006ECA1 /* CurrencyItem..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyItem..swift; sourceTree = "<group>"; };
+		8365482B243343970006ECA1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		8365482D243343A20006ECA1 /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
+		8365482F243344540006ECA1 /* GetExchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetExchange.swift; sourceTree = "<group>"; };
+		836548312433450F0006ECA1 /* ExchangeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeItem.swift; sourceTree = "<group>"; };
 		838E1EBD242A14DA00A65D17 /* BaseViewWithXIBInit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewWithXIBInit.swift; sourceTree = "<group>"; };
 		838E1EC1242A150900A65D17 /* UIView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 		838E1EC2242A150900A65D17 /* UIView+Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraint.swift"; sourceTree = "<group>"; };
@@ -256,10 +264,8 @@
 		83335701242A0FFD001FF9B6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				833922CD242B069900091329 /* Cell */,
-				833356F0242A0E67001FF9B6 /* ViewController.swift */,
-				833922E0242B0B4B00091329 /* ViewController.TableView.swift */,
-				833356F2242A0E67001FF9B6 /* Main.storyboard */,
+				8365482A243343880006ECA1 /* Detail */,
+				836548292433437A0006ECA1 /* Main */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -281,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				83654826243337540006ECA1 /* CurrencyItem..swift */,
+				836548312433450F0006ECA1 /* ExchangeItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -383,6 +390,26 @@
 			path = ScrollingPaginator;
 			sourceTree = "<group>";
 		};
+		836548292433437A0006ECA1 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				833922CD242B069900091329 /* Cell */,
+				833356F0242A0E67001FF9B6 /* ViewController.swift */,
+				833922E0242B0B4B00091329 /* ViewController.TableView.swift */,
+				833356F2242A0E67001FF9B6 /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8365482A243343880006ECA1 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				8365482B243343970006ECA1 /* DetailViewController.swift */,
+				8365482D243343A20006ECA1 /* DetailViewController.storyboard */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		838E1EBB242A14C000A65D17 /* Base classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -459,6 +486,7 @@
 			isa = PBXGroup;
 			children = (
 				83654824243337140006ECA1 /* GetCurrency.swift */,
+				8365482F243344540006ECA1 /* GetExchange.swift */,
 			);
 			path = GET;
 			sourceTree = "<group>";
@@ -674,6 +702,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8365482E243343A20006ECA1 /* DetailViewController.storyboard in Resources */,
 				833922D1242B06D300091329 /* CurrencyCell.xib in Resources */,
 				838E1F0A242A1B0800A65D17 /* Localizable.strings in Resources */,
 				838E1ECC242A153B00A65D17 /* TestView.xib in Resources */,
@@ -759,6 +788,7 @@
 				832ACE16242C70B00092F0F0 /* APICancellable.swift in Sources */,
 				838E1EC7242A150900A65D17 /* UIView+Layer.swift in Sources */,
 				838E1EE3242A164E00A65D17 /* API+RequestProgress.swift in Sources */,
+				8365482C243343970006ECA1 /* DetailViewController.swift in Sources */,
 				838E1EEB242A165B00A65D17 /* PostAPI.swift in Sources */,
 				838E1F1F242A1CF700A65D17 /* Parser.swift in Sources */,
 				838E1EE1242A164E00A65D17 /* API+ReplyHandling.swift in Sources */,
@@ -774,6 +804,7 @@
 				838E1EF5242A176C00A65D17 /* HTTPURLResponse+Utils.swift in Sources */,
 				832ACE0B242C69B50092F0F0 /* Pagination.swift in Sources */,
 				833922DA242B0ADA00091329 /* UITableView+Utils.swift in Sources */,
+				836548322433450F0006ECA1 /* ExchangeItem.swift in Sources */,
 				838E1F40242A1FF800A65D17 /* NSMutableAttributedString+Utils.swift in Sources */,
 				838E1F5F242A26FD00A65D17 /* JSONDecoder+Utils.swift in Sources */,
 				838E1EF9242A18B900A65D17 /* Dictionary+Utils.swift in Sources */,
@@ -788,6 +819,7 @@
 				838E1F3E242A1F5100A65D17 /* Date+Transfrom.swift in Sources */,
 				838E1EDE242A164E00A65D17 /* ItemsArrayProviderAPI.swift in Sources */,
 				838E1F42242A202D00A65D17 /* MWPError.swift in Sources */,
+				83654830243344540006ECA1 /* GetExchange.swift in Sources */,
 				838E1F18242A1C9A00A65D17 /* MissedPropertiesAPIModel.swift in Sources */,
 				838E1EED242A165B00A65D17 /* AlamofireURLPagedAPI.swift in Sources */,
 				838E1EF7242A17F600A65D17 /* Data+Utils.swift in Sources */,
