@@ -8,8 +8,8 @@
 
 import Foundation
 
-typealias AliasDictionary = [String: Any]
-typealias EmptyBlock = () -> Void
+public typealias AliasDictionary = [String: Any]
+public typealias EmptyBlock = () -> Void
 public typealias StringBlock = (String?) -> Void
 
 struct Constants {

@@ -18,13 +18,13 @@ extension ViewController {
     }
     
     @IBAction func editingChanged(_ sender: Any) {
-        guard let text = textField.text, !text.isEmpty else {
+        guard let text = textField.text?.lowercased(), !text.isEmpty else {
             self.items = originalItems
             return
         }
         items = originalItems?.filter({
-            let containsName = $0.name?.contains(text) ?? false
-            let containsTag = $0.tag?.contains(text) ?? false
+            let containsName = $0.name?.lowercased().contains(text) ?? false
+            let containsTag = $0.tag?.lowercased().contains(text) ?? false
             return containsName || containsTag
         })
     }

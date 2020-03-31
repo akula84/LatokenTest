@@ -48,6 +48,10 @@
 		8369F52224335BA200960F3A /* GetInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369F52124335BA200960F3A /* GetInfo.swift */; };
 		8369F52424335BDB00960F3A /* InfoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369F52324335BDB00960F3A /* InfoItem.swift */; };
 		8369F5262433626E00960F3A /* ViewController.Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369F5252433626E00960F3A /* ViewController.Action.swift */; };
+		8369F5282433640000960F3A /* KeyboardShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369F5272433640000960F3A /* KeyboardShowable.swift */; };
+		8369F52C2433640600960F3A /* Notification+KeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369F5292433640600960F3A /* Notification+KeyBoard.swift */; };
+		8369F52D2433640600960F3A /* NotificationCenter+KeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369F52A2433640600960F3A /* NotificationCenter+KeyBoard.swift */; };
+		8369F52E2433640600960F3A /* UIView+TapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369F52B2433640600960F3A /* UIView+TapGesture.swift */; };
 		838E1EBE242A14DA00A65D17 /* BaseViewWithXIBInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838E1EBD242A14DA00A65D17 /* BaseViewWithXIBInit.swift */; };
 		838E1EC5242A150900A65D17 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838E1EC1242A150900A65D17 /* UIView+Utils.swift */; };
 		838E1EC6242A150900A65D17 /* UIView+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838E1EC2242A150900A65D17 /* UIView+Constraint.swift */; };
@@ -146,6 +150,10 @@
 		8369F52124335BA200960F3A /* GetInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInfo.swift; sourceTree = "<group>"; };
 		8369F52324335BDB00960F3A /* InfoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoItem.swift; sourceTree = "<group>"; };
 		8369F5252433626E00960F3A /* ViewController.Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.Action.swift; sourceTree = "<group>"; };
+		8369F5272433640000960F3A /* KeyboardShowable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardShowable.swift; sourceTree = "<group>"; };
+		8369F5292433640600960F3A /* Notification+KeyBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notification+KeyBoard.swift"; sourceTree = "<group>"; };
+		8369F52A2433640600960F3A /* NotificationCenter+KeyBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+KeyBoard.swift"; sourceTree = "<group>"; };
+		8369F52B2433640600960F3A /* UIView+TapGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+TapGesture.swift"; sourceTree = "<group>"; };
 		838E1EBD242A14DA00A65D17 /* BaseViewWithXIBInit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewWithXIBInit.swift; sourceTree = "<group>"; };
 		838E1EC1242A150900A65D17 /* UIView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 		838E1EC2242A150900A65D17 /* UIView+Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraint.swift"; sourceTree = "<group>"; };
@@ -566,6 +574,10 @@
 		838E1EFA242A191F00A65D17 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				8369F5272433640000960F3A /* KeyboardShowable.swift */,
+				8369F5292433640600960F3A /* Notification+KeyBoard.swift */,
+				8369F52A2433640600960F3A /* NotificationCenter+KeyBoard.swift */,
+				8369F52B2433640600960F3A /* UIView+TapGesture.swift */,
 				838E1EFB242A192900A65D17 /* MessageCenter */,
 				832ACE19242C79C80092F0F0 /* Monitor.swift */,
 				838E1F41242A202D00A65D17 /* MWPError.swift */,
@@ -796,6 +808,7 @@
 				838E1EE2242A164E00A65D17 /* API.swift in Sources */,
 				838E1EBE242A14DA00A65D17 /* BaseViewWithXIBInit.swift in Sources */,
 				832ACE09242C69920092F0F0 /* PaginatedItemsProvider.swift in Sources */,
+				8369F52C2433640600960F3A /* Notification+KeyBoard.swift in Sources */,
 				83654825243337140006ECA1 /* GetCurrency.swift in Sources */,
 				833922DC242B0ADA00091329 /* UITableView+TableViewHeaderAutolayout.swift in Sources */,
 				838E1F1B242A1CD600A65D17 /* BaseModel.swift in Sources */,
@@ -814,6 +827,7 @@
 				8369F52424335BDB00960F3A /* InfoItem.swift in Sources */,
 				833922DF242B0B0200091329 /* RegisterTableView.swift in Sources */,
 				8369F51224334B8700960F3A /* DataManager.swift in Sources */,
+				8369F5282433640000960F3A /* KeyboardShowable.swift in Sources */,
 				832ACE0D242C6A3B0092F0F0 /* Cancellable.swift in Sources */,
 				832ACE16242C70B00092F0F0 /* APICancellable.swift in Sources */,
 				838E1EC7242A150900A65D17 /* UIView+Layer.swift in Sources */,
@@ -833,6 +847,7 @@
 				83335710242A1087001FF9B6 /* ActivityIndicatorView.swift in Sources */,
 				838E1EF5242A176C00A65D17 /* HTTPURLResponse+Utils.swift in Sources */,
 				832ACE0B242C69B50092F0F0 /* Pagination.swift in Sources */,
+				8369F52D2433640600960F3A /* NotificationCenter+KeyBoard.swift in Sources */,
 				833922DA242B0ADA00091329 /* UITableView+Utils.swift in Sources */,
 				836548322433450F0006ECA1 /* ExchangeItem.swift in Sources */,
 				838E1F40242A1FF800A65D17 /* NSMutableAttributedString+Utils.swift in Sources */,
@@ -845,6 +860,7 @@
 				838E1EE0242A164E00A65D17 /* PagedAPI.swift in Sources */,
 				8369F52024335B6800960F3A /* InfoManager.swift in Sources */,
 				8369F5262433626E00960F3A /* ViewController.Action.swift in Sources */,
+				8369F52E2433640600960F3A /* UIView+TapGesture.swift in Sources */,
 				832ACE1A242C79C80092F0F0 /* Monitor.swift in Sources */,
 				838E1F0D242A1B9000A65D17 /* Localization.swift in Sources */,
 				838E1EC5242A150900A65D17 /* UIView+Utils.swift in Sources */,

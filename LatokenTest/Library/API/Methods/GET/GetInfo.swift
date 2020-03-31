@@ -33,6 +33,4 @@ class GetInfo: AlamofireAPI {
             super.apiDidReturnReply(items, raw: raw)
         }
     }
-    
-    override var shouldLogRequest: Bool {true}
 }

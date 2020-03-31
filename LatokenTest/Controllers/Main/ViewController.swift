@@ -11,13 +11,13 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet var currencyView: TableCurrencyView!
     @IBOutlet var textField: UITextField!
-    
+
     var items: [GetCurrency.APIItem]? {
         didSet {
             currencyView.items = items
         }
     }
-    
+
     var originalItems: [GetCurrency.APIItem]?
 
     override func viewDidLoad() {
@@ -26,9 +26,9 @@ class ViewController: UIViewController {
         prepareHandlers()
         prepareInfo()
     }
-    
+
     func prepareInfo() {
-        InfoManager.load(complete:{ [weak self] in
+        InfoManager.load(complete: { [weak self] in
             self?.currencyView.reloadTable()
         })
     }
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
 
     func loadItems() {
         Router.showLoader()
-        GetCurrency() { [weak self] items, _, _ in
+        GetCurrency { [weak self] items, _, _ in
             Router.removeLoader()
             self?.items = items as? [GetCurrency.APIItem]
             self?.originalItems = self?.items
@@ -54,4 +54,12 @@ class ViewController: UIViewController {
         vc.item = item
         Router.pushViewController(vc)
     }
+ 
+}
+
+extension ViewController: UITextFieldDelegate {
+     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+         textField.resignFirstResponder()
+         return true
+     }
 }
