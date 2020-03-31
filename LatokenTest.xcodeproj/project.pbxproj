@@ -39,6 +39,9 @@
 		8365482E243343A20006ECA1 /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8365482D243343A20006ECA1 /* DetailViewController.storyboard */; };
 		83654830243344540006ECA1 /* GetExchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8365482F243344540006ECA1 /* GetExchange.swift */; };
 		836548322433450F0006ECA1 /* ExchangeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836548312433450F0006ECA1 /* ExchangeItem.swift */; };
+		8369F50E24334AD200960F3A /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369F50D24334AD200960F3A /* HistoryViewController.swift */; };
+		8369F51024334ADE00960F3A /* HistoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8369F50F24334ADE00960F3A /* HistoryViewController.storyboard */; };
+		8369F51224334B8700960F3A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369F51124334B8700960F3A /* DataManager.swift */; };
 		838E1EBE242A14DA00A65D17 /* BaseViewWithXIBInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838E1EBD242A14DA00A65D17 /* BaseViewWithXIBInit.swift */; };
 		838E1EC5242A150900A65D17 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838E1EC1242A150900A65D17 /* UIView+Utils.swift */; };
 		838E1EC6242A150900A65D17 /* UIView+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838E1EC2242A150900A65D17 /* UIView+Constraint.swift */; };
@@ -130,6 +133,9 @@
 		8365482D243343A20006ECA1 /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
 		8365482F243344540006ECA1 /* GetExchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetExchange.swift; sourceTree = "<group>"; };
 		836548312433450F0006ECA1 /* ExchangeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeItem.swift; sourceTree = "<group>"; };
+		8369F50D24334AD200960F3A /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		8369F50F24334ADE00960F3A /* HistoryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HistoryViewController.storyboard; sourceTree = "<group>"; };
+		8369F51124334B8700960F3A /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		838E1EBD242A14DA00A65D17 /* BaseViewWithXIBInit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewWithXIBInit.swift; sourceTree = "<group>"; };
 		838E1EC1242A150900A65D17 /* UIView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 		838E1EC2242A150900A65D17 /* UIView+Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraint.swift"; sourceTree = "<group>"; };
@@ -264,6 +270,7 @@
 		83335701242A0FFD001FF9B6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8369F50C24334AC100960F3A /* History */,
 				8365482A243343880006ECA1 /* Detail */,
 				836548292433437A0006ECA1 /* Main */,
 			);
@@ -295,6 +302,7 @@
 		83335704242A103B001FF9B6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8369F51524334EB600960F3A /* TableCurrencyView */,
 				838E1EC8242A152400A65D17 /* TestView */,
 				8333570E242A1081001FF9B6 /* ActivityIndicatorView */,
 			);
@@ -305,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				83335706242A1054001FF9B6 /* Router.swift */,
+				8369F51124334B8700960F3A /* DataManager.swift */,
 				832ACE17242C79A20092F0F0 /* NetworkManager.swift */,
 			);
 			path = Managers;
@@ -408,6 +417,22 @@
 				8365482D243343A20006ECA1 /* DetailViewController.storyboard */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		8369F50C24334AC100960F3A /* History */ = {
+			isa = PBXGroup;
+			children = (
+				8369F50D24334AD200960F3A /* HistoryViewController.swift */,
+				8369F50F24334ADE00960F3A /* HistoryViewController.storyboard */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		8369F51524334EB600960F3A /* TableCurrencyView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableCurrencyView;
 			sourceTree = "<group>";
 		};
 		838E1EBB242A14C000A65D17 /* Base classes */ = {
@@ -702,6 +727,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8369F51024334ADE00960F3A /* HistoryViewController.storyboard in Resources */,
 				8365482E243343A20006ECA1 /* DetailViewController.storyboard in Resources */,
 				833922D1242B06D300091329 /* CurrencyCell.xib in Resources */,
 				838E1F0A242A1B0800A65D17 /* Localizable.strings in Resources */,
@@ -784,6 +810,7 @@
 				838E1F48242A207700A65D17 /* Double+Utils.swift in Sources */,
 				833922E1242B0B4B00091329 /* ViewController.TableView.swift in Sources */,
 				833922DF242B0B0200091329 /* RegisterTableView.swift in Sources */,
+				8369F51224334B8700960F3A /* DataManager.swift in Sources */,
 				832ACE0D242C6A3B0092F0F0 /* Cancellable.swift in Sources */,
 				832ACE16242C70B00092F0F0 /* APICancellable.swift in Sources */,
 				838E1EC7242A150900A65D17 /* UIView+Layer.swift in Sources */,
@@ -830,6 +857,7 @@
 				838E1F17242A1C9A00A65D17 /* APIModel+CloudKit.swift in Sources */,
 				838E1F39242A1F3A00A65D17 /* Formatter.swift in Sources */,
 				838E1F16242A1C9A00A65D17 /* APIModel+Alamofire.swift in Sources */,
+				8369F50E24334AD200960F3A /* HistoryViewController.swift in Sources */,
 				833922CF242B06BC00091329 /* CurrencyCell.swift in Sources */,
 				838E1F20242A1CF700A65D17 /* Parser+KeyConversion.swift in Sources */,
 				838E1EEE242A165B00A65D17 /* AlamofireParamsPagedAPI.swift in Sources */,

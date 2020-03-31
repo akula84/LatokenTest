@@ -26,4 +26,16 @@ class ViewController: UIViewController {
             self?.reloadTable()
         }
     }
+    
+    func showDetail(item: GetCurrency.APIItem?) {
+        let vc = DetailViewController.controller()
+        vc.item = item
+        Router.pushViewController(vc)
+    }
+    
+    @IBAction func actionHistory(_ sender: Any) {
+        let vc = HistoryViewController.controller()
+        let nav = UINavigationController(rootViewController: vc)
+        Router.present(nav)
+    }
 }

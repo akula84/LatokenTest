@@ -6,14 +6,17 @@
 //  Copyright © 2020 Артем Кулагин. All rights reserved.
 //
 
-import Foundation
+import RealmSwift
 
-class CurrencyItem: Decodable {
-    var id: String?
-    var status: String?
-    var type: String?
-    var name: String?
-    var tag: String?
-    var description: String?
-    var logo: String?
+class CurrencyItem: Object, Decodable {
+    @objc dynamic var id: String?
+    @objc dynamic var status: String?
+    @objc dynamic var type: String?
+    @objc dynamic var name: String?
+    @objc dynamic var tag: String?
+    @objc dynamic var logo: String?
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }

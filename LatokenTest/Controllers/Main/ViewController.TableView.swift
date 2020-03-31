@@ -22,9 +22,9 @@ extension ViewController: UITableViewDataSource {
 
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = DetailViewController.controller()
-        vc.item = item(indexPath)
-        Router.pushViewController(vc)
+        let item = self.item(indexPath)
+        DataManager.save(item: item)
+        showDetail(item: item)
     }
 }
 

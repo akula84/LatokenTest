@@ -53,7 +53,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="jn3-bo-JKB"/>
+                    <navigationItem key="navigationItem" id="jn3-bo-JKB">
+                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="GBb-uI-CcR">
+                            <connections>
+                                <action selector="actionHistory:" destination="BYZ-38-t0r" id="bt7-XQ-k8d"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="t3g-lO-HpR" id="Lf4-69-K3y"/>
                     </connections>
