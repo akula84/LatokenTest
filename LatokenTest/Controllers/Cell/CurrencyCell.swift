@@ -13,11 +13,12 @@ import Kingfisher
 class CurrencyCell: UITableViewCell {
     @IBOutlet var imageCharacter: UIImageView!
     @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var tagLabel: UILabel!
     
     var item: GetCurrency.APIItem? {
         didSet {
             nameLabel.text = item?.name
-            //prepareImage()
+            tagLabel.text = item?.tag
         }
     }
     /*
