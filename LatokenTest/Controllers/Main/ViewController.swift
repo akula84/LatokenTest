@@ -9,30 +9,41 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet var currencyView: TableCurrencyView!
 
-    var items: [GetCurrency.APIItem]?
+    var items: [GetCurrency.APIItem]? {
+        didSet {
+            currencyView.items = items
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         loadItems()
+        prepareHandlers()
+    }
+
+    func prepareHandlers() {
+        currencyView.onDidSelect = { [weak self] in
+            DataManager.save(item: $0)
+            self?.showDetail(item: $0)
+        }
     }
 
     func loadItems() {
         Router.showLoader()
-        GetCurrency(sync: false, object: nil) { [weak self] (items, _, _) in
+        GetCurrency(sync: false, object: nil) { [weak self] items, _, _ in
             Router.removeLoader()
             self?.items = items as? [GetCurrency.APIItem]
-            self?.reloadTable()
         }
     }
-    
+
     func showDetail(item: GetCurrency.APIItem?) {
         let vc = DetailViewController.controller()
         vc.item = item
         Router.pushViewController(vc)
     }
-    
+
     @IBAction func actionHistory(_ sender: Any) {
         let vc = HistoryViewController.controller()
         let nav = UINavigationController(rootViewController: vc)

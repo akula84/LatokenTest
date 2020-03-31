@@ -1,14 +1,14 @@
 //
-//  ViewController.TableView.swift
-//  Modulbank
+//  TableCurrencyView.TableView.swift
+//  LatokenTest
 //
-//  Created by Артем Кулагин on 25.03.2020.
+//  Created by Артем Кулагин on 31.03.2020.
 //  Copyright © 2020 Артем Кулагин. All rights reserved.
 //
 
 import UIKit
 
-extension ViewController: UITableViewDataSource {
+extension TableCurrencyView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         items?.count ?? 0
     }
@@ -20,20 +20,8 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
-extension ViewController: UITableViewDelegate {
+extension TableCurrencyView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let item = self.item(indexPath)
-        DataManager.save(item: item)
-        showDetail(item: item)
-    }
-}
-
-extension ViewController {
-    func reloadTable() {
-        tableView.reloadData()
-    }
-
-    func item(_ indexPath: IndexPath) -> GetCurrency.APIItem? {
-        items?.valueAt(indexPath.row)
+        onDidSelect?(item(indexPath))
     }
 }
